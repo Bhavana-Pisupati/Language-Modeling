@@ -398,9 +398,8 @@ if __name__ == "__main__":
     # test.testBuildBigramProbs()
     # test.testGetTopWords()
     # test.testGenerateTextFromUnigrams()
-    test.testGenerateTextFromBigrams()
+    # test.testGenerateTextFromBigrams()
     ## Uncomment these for Week 3 ##
-"""
+    
     print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
     test.runWeek3()
-"""

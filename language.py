@@ -222,19 +222,13 @@ def generateTextFromBigrams(count, startWords, startWordProbs, bigramProbs):
     text=""
     c=0
     while c<count:
-        if text=="":
+        if text=="" or choice==".":
             choice=choices(startWords, weights=startWordProbs)[0]
-            while choice==".":
-                choice=choices(startWords, weights=startWordProbs)[0]
             text+=choice+" "
             c+=1
         else:
             d=bigramProbs[choice]
-            words=d["words"]
-            probs=d["probs"]
-            choice=choices(words,weights=probs)[0]
-            while choice==".":
-                choice=choices(words,weights=probs)[0]
+            choice=choices(d["words"],weights=d["probs"])[0]
             text+=choice+" "
             c+=1
     return text.strip()
